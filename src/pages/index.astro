@@ -1,0 +1,65 @@
+---
+import "../styles/global.css";
+
+const projects = [
+  {
+    title: "Countdown",
+    description: "A simple countdown timer app.",
+    href: "https://countdown.all-the.rest",
+    badge: "Live",
+  },
+];
+---
+
+<!doctype html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>all-the.rest</title>
+    <meta name="description" content="A collection of small, focused web projects by Florian Reisinger." />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>" />
+  </head>
+  <body class="h-full font-sans antialiased">
+    <main class="mx-auto flex min-h-full max-w-2xl flex-col items-center justify-center px-4 py-16">
+      <h1 class="mb-2 text-4xl font-bold tracking-tight">all-the.rest</h1>
+      <p class="mb-12 text-base-content/60">
+        Small, focused web projects by Florian Reisinger.
+      </p>
+
+      <ul class="w-full space-y-4">
+        {
+          projects.map((p) => (
+            <li>
+              <a
+                href={p.href}
+                class="card bg-base-200 hover:bg-base-300 transition-colors no-underline group"
+              >
+                <div class="card-body flex flex-row items-center justify-between gap-4 p-4">
+                  <div class="min-w-0">
+                    <span class="font-medium group-hover:text-primary transition-colors">
+                      {p.title}
+                    </span>
+                    <span class="ml-2 text-sm text-base-content/50">{p.href.replace("https://", "")}</span>
+                    <p class="mt-0.5 text-sm text-base-content/60 truncate">{p.description}</p>
+                  </div>
+                  <span class="badge badge-primary shrink-0">{p.badge}</span>
+                </div>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+
+      {
+        projects.length === 0 && (
+          <p class="text-base-content/50 italic">No projects yet. Check back soon.</p>
+        )
+      }
+
+      <p class="mt-16 text-xs text-base-content/30">
+        &copy; {new Date().getFullYear()} Florian Reisinger
+      </p>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@plugin "daisyui/theme" {
+  name: "dark";
+  default: true;
+  prefersdark: true;
+  --color-base-100: oklch(18% 0.005 250);
+  --color-base-200: oklch(22% 0.005 250);
+  --color-base-300: oklch(26% 0.005 250);
+  --color-base-content: oklch(95% 0 0);
+  --color-primary: oklch(65% 0.2 260);
+  --color-primary-content: oklch(95% 0 0);
+}
+
+@plugin "daisyui" {
+  themes: dark --default;
+}

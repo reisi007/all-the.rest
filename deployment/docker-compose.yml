@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  website:
+    image: nginx:alpine
+    container_name: all-the-rest
+    restart: unless-stopped
+    volumes:
+      - /home/webadmin/websites/all-the.rest:/usr/share/nginx/html:ro
+    networks:
+      webnet:
+        ipv4_address: 172.18.0.51
+
+networks:
+  webnet:
+    external: true
