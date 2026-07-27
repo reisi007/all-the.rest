@@ -9,8 +9,8 @@
     "sync": "bash sync.sh"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.9",
-    "astro": "^7.0.8"
+    "@astrojs/check": "^0.9.10",
+    "astro": "^7.1.4"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.2.2",

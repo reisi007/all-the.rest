@@ -1,4 +1,7 @@
 allowBuilds:
   esbuild: true
+minimumReleaseAgeExclude:
+  - '@astrojs/check@0.9.10'
+  - astro@7.1.4
 onlyBuiltDependencies:
   - esbuild
