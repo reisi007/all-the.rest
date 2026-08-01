@@ -6,7 +6,8 @@
     "dev": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "sync": "bash sync.sh"
+    "sync": "bash sync.sh",
+    "deploy": "pnpm build && pnpm sync"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.10",
